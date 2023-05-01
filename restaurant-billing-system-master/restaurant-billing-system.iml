@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="EclipseModuleManager">
+    <libelement value="file://C:/Users/admin/Desktop/my project/restaurant-billing-system/dependencies/itextpdf-5.4.0.jar" />
+    <libelement value="file://C:/Users/admin/Desktop/my project/restaurant-billing-system/dependencies/mysql-connector-java-8.0.19.jar" />
+    <libelement value="file://C:/Users/admin/Desktop/my project/restaurant-billing-system/dependencies/rs2xml.jar" />
+    <src_description expected_position="0">
+      <src_folder value="file://$MODULE_DIR$/src" expected_position="0" />
+    </src_description>
+  </component>
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/bin" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="19" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="rs2xml.jar">
+        <CLASSES>
+          <root url="file://C:/Users/admin/Desktop/my project/restaurant-billing-system/dependencies/rs2xml.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="itextpdf-5.4.0.jar">
+        <CLASSES>
+          <root url="file://C:/Users/admin/Desktop/my project/restaurant-billing-system/dependencies/itextpdf-5.4.0.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="mysql-connector-java-8.0.19.jar">
+        <CLASSES>
+          <root url="file://C:/Users/admin/Desktop/my project/restaurant-billing-system/dependencies/mysql-connector-java-8.0.19.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/dependencies/itextpdf-5.4.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/dependencies/mysql-connector-java-8.0.19.jar!/" />
+          <root url="jar://$MODULE_DIR$/dependencies/rs2xml.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/dependencies/rs2xml.jar!/src" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+</module>
