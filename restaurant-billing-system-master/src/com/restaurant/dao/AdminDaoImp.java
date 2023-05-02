@@ -9,7 +9,7 @@ import com.restaurant.pojo.Admin;
 import com.restaurant.utility.DBUtility;
 
 
-public class AdminDaoImp implements AdminDao
+public class AdminDaoImp implements AdminDao 
 {
 	String str;
 	PreparedStatement stmt;
@@ -31,7 +31,7 @@ public class AdminDaoImp implements AdminDao
     	stmt.setString(4,a.getAddress());
     	stmt.setString(5,a.getPassword());
     	
-    	row=stmt.executeUpdate();   //return type of executeupdate is int, it returns ROWS affected in DATABASE
+    	row=stmt.executeUpdate();//return type of execute update is int, it returns ROWS affected in DATABASE
     	
     	}
     	catch(SQLException e)

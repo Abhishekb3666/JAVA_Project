@@ -37,7 +37,6 @@ import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
 import com.restaurant.dao.FoodDaoImp;
 import com.restaurant.dao.OrderDaoImp;
-import com.restaurant.message.SendMessage;
 import com.restaurant.pojo.Food;
 import com.restaurant.pojo.Order;
 import com.restaurant.utility.DBUtility;
@@ -46,6 +45,7 @@ import net.proteanit.sql.DbUtils;
 
 public class Bill extends JFrame {
 
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField searchName;
 	private JTable table;
@@ -77,9 +77,6 @@ public class Bill extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
 	public Bill() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1263, 710);
@@ -302,13 +299,12 @@ public class Bill extends JFrame {
 				{
 					custName.setText("");
 					mob.setText("");
-					bill.setText("****************** WELCOME TO FOOD PLAZA *****************"
+					bill.setText("****************** WELCOME TO Symbi-Eat *****************"
 							+ "\n\nCustomer Name : "+customerName+"\nDate : "+LocalDate.now().toString()
 							+  "\n\n*******************************************************************"
 							+ "\n\n|Food Name|\t\t|Quantity|\t|Price|"
 							+ "\n-------------------------------------------------------------------------------"
 							);
-					
 					for(Order o:l)
 					{
 						String foodName=new FoodDaoImp().getFoodNameById(o.getFoodId());
@@ -523,7 +519,7 @@ public class Bill extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 			      try {
-			    	String file = "C:/Users/Vostro.MURADALIMJ/Desktop/PDF's/bill.pdf";    
+			    	String file = "D:/College/Fourth SEM/java/Project/bill.pdf";
 				    //Creating a Document object 
 				    Document doc = new Document();    
 					PdfWriter.getInstance(doc, new FileOutputStream(file));
@@ -537,13 +533,6 @@ public class Bill extends JFrame {
 				  } catch (FileNotFoundException | DocumentException e1) {
 					e1.printStackTrace();
 				}
-			      String apiKey="VeKDJJ29ZpxDPDWaKfhYZ5qwJvMHFgFlduIKTf5205GohItZyCG";
-				  SendMessage sotp=new SendMessage();
-				  String message="****** FOOD PLAZA ******"+
-				                 "\nTotal Bill for your Order is Rs. "+new OrderDaoImp().totalOrderPrice(customerName)+"\nThanks for visiting we loved to served you:)\nvisit again....";
-				  System.out.println(message);
-		          sotp.sendMessage(message, customerMobile, apiKey);
-			      
 			}
 		});
 		btnPrint.setForeground(new Color(32, 178, 170));
